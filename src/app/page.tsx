@@ -1,3 +1,9 @@
+import Home from '@/components/ux/home'
+
 export default function Page() {
-  return <div></div>
+  return (
+    <div>
+      <Home />
+    </div>
+  )
 }

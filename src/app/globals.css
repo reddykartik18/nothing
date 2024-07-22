@@ -1,33 +1,110 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base
+@tailwind components
+@tailwind utilities
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* white */
+    --background: 0 0% 100%;
+    --card: 0 0% 100%;
+    --popover: 0 0% 100%;
+
+    /* gray-950 */
+    --foreground: 224 71.4% 4.1%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --ring: 224 71.4% 4.1%;
+
+    /* gray-900 */
+    --primary: 220.9 39.3% 11%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    /* gray-500 */
+    --muted-foreground: 220 8.9% 46.1%;
+    /* red-500 */
+    --destructive: 0 84.2% 60.2%;
+
+    /* gray-200 */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+
+    /* gray-100 */
+    --secondary: 220 14.3% 95.5%;
+    --muted: 220 14.3% 95.5%;
+    --accent: 220 14.3% 95.5%;
+
+    /* gray-50 */
+    --primary-foreground: 210 20% 98%;
+    --destructive-foreground: 210 20% 98%;
+
+    --radius: 0.5rem;
+    --opcaity: 0.75;
+    --chart-1: 12 76% 61%; /* entan red */
+    --chart-2: 173 58% 39%; /* jungle green */
+    --chart-3: 197 37% 24%; /* blue dianne */
+    --chart-4: 43 74% 66%; /* lemon yellow */
+    --chart-5: 27 87% 67%; /* sandy brown */
+  }
+
+  .dark {
+    /* gray-950 */
+    --background: 224 71.4% 4.1%;
+    --card: 224 71.4% 4.1%;
+    --popover: 224 71.4% 4.1%;
+
+    /* gray-900 */
+    --primary-foreground: 220.9 39.3% 11%;
+    /* red-900 */
+    --destructive: 0 62.8% 30.6%;
+
+    /* gray-800 */
+    --secondary: 215 27.9% 16.9%;
+    --muted: 215 27.9% 16.9%;
+    --accent: 215 27.9% 16.9%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+
+    /* gray-50 */
+    --foreground: 210 20% 98%;
+    --card-foreground: 210 20% 98%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --secondary-foreground: 210 20% 98%;
+    --accent-foreground: 210 20% 98%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* gray-400 */
+    --muted-foreground: 217.9 10.6% 64.9%;
+    /* gray-300 */
+    --ring: 216 12.2% 83.9%;
+
+    --opcaity: 0.18;
+    --chart-1: 220 70% 50%; /* blue */
+    --chart-2: 160 60% 45%; /* teal green */
+    --chart-3: 30 80% 55%; /* orange */
+    --chart-4: 280 65% 60%; /* purple */
+    --chart-5: 280 65% 60%; /* purple */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0px;
+    z-index: -10;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to left, hsl(var(--secondary)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--secondary)) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: var(--opacity);
   }
 }

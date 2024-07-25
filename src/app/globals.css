@@ -39,7 +39,7 @@
     --destructive-foreground: 210 20% 98%;
 
     --radius: 0.5rem;
-    --opacity: 0.75;
+    --opacity: 0.25;
     --chart-1: 12 76% 61%; /* entan red */
     --chart-2: 173 58% 39%; /* jungle green */
     --chart-3: 197 37% 24%; /* blue dianne */
@@ -79,7 +79,7 @@
     /* gray-300 */
     --ring: 216 12.2% 83.9%;
 
-    --opacity: 0.18;
+    --opacity: 0.25;
     --chart-1: 220 70% 50%; /* blue */
     --chart-2: 160 60% 45%; /* teal green */
     --chart-3: 30 80% 55%; /* orange */
@@ -102,9 +102,9 @@
     z-index: -10;
     min-width: 100vw;
     min-height: 100vh;
-    background: linear-gradient(to left, hsl(var(--secondary)) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--secondary)) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background: linear-gradient(to left, hsl(var(--secondary-foreground)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--secondary-foreground)) 1px, transparent 1px);
+    background-size: 80px 80px;
     opacity: var(--opacity);
   }
   .icon {

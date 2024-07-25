@@ -4,7 +4,7 @@ import { Component } from '@/components/ux/chart'
 
 export default function Home() {
   return (
-    <header className='p-5'>
+    <header>
       <Navbar />
       <main className='mb-10'>
         <div className='max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32'>

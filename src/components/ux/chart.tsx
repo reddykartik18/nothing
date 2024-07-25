@@ -48,7 +48,7 @@ export function Component() {
       </CardHeader>
       <CardContent className='px-2 pt-4 sm:px-6 sm:pt-6'>
         <ChartContainer config={chartConfig} className='aspect-auto h-[250px] w-full'>
-          <AreaChart accessibilityLayer data={chartData} margin={{left:12, right:12,}}>
+          <AreaChart accessibilityLayer data={chartData} margin={{ left: 12, right: 12 }}>
             <defs>
               <linearGradient id='fillResidential' x1='0' y1='0' x2='0' y2='1'>
                 <stop offset='5%' stopColor='var(--color-residential)' stopOpacity={0.8} />
@@ -72,12 +72,7 @@ export function Component() {
                 })
               }}
             />
-            <ChartTooltip
-              cursor={false}
-              content={
-                <ChartTooltipContent indicator='dot' />
-              }
-            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent indicator='dot' />} />
             <Area
               dataKey='commercial'
               type='natural'
@@ -101,4 +96,3 @@ export function Component() {
     </Card>
   )
 }
-

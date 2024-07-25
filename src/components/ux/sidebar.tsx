@@ -24,7 +24,7 @@ export default function Sidebar({ open, onClose, data }: Props) {
       onClick={handleClose}
     >
       <aside
-        className={`w-[320px] ${visible ? 'mr-0' : '-mr-[320px]'} bg-background transition-all ease-linear duration-300 border border-l-input p-5 flex flex-col gap-y-5`}
+        className={`w-[320px] ${visible ? 'mr-0' : '-mr-[320px]'} bg-background transition-all ease-linear duration-300 border border-l-input p-5 flex flex-col gap-y-5 relative`}
         onClick={(event) => event.stopPropagation()}
       >
         <button
